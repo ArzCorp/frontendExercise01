@@ -2,6 +2,20 @@ body{
   margin: 0px;
   padding: 0px;
   font-family: 'Pathway Gothic One', sans-serif;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+  padding: 0px;
+}
+
+p{
+  margin: 0px;
+  padding: 0px;
 }
 
 .grid-container{
@@ -25,4 +39,43 @@ header img{
 
 .header__nav p{
   margin-top: 0px;
+}
+
+/*Se cran estilos del main*/
+
+.articles__container{
+  display: grid;
+  grid-template-columns: .5fr 3fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/*Estilos de la barra lateral*/
+
+.article__left-title{
+  text-align: center;
+  margin: 0px auto;
+  height: auto;
+  font-size: 20px;
+}
+
+.article__left-title h2, h2, h3{
+  margin: 5px 0px 10px 0px;
+  line-height: 25px;
+}
+
+.article__left-title p{
+    margin: 5px 0px 10px 0px;
+    text-align: center;
+}
+
+.span{
+    display: block;
+    border-bottom: 2px solid black;
+    width: 40%;
+    margin: 0px auto;
+}
+
+.article__left-content p:nth-of-type(1) {
+  margin: 10px 0px;
+  text-align: center;
 }
