@@ -1,0 +1,28 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.grid-container{
+  margin: 0px auto;
+  max-width: 980px;
+}
+
+header img{
+  width: 50%;
+  height: 80px;
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 10px;
+}
+
+.header__nav{
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+}
+
+.header__nav p{
+  margin-top: 0px;
+}
