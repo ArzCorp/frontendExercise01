@@ -193,9 +193,16 @@ header img{
 /*Contenedor lado izquierdo*/
 
 .article__rigth{
-  margin-top: 5px;
-  border-top: 2px solid black;
+  margin: 5px auto 0px auto;
+  width: 95%;
   border-left: 2px solid black;
   grid-area: right;
   height: 100%;
+}
+
+.article__rigth div{
+  height: 100%;
+  width: 90%;
+  margin: 0px 0px 0px auto;
+  border-top: 2px solid black;
 }
