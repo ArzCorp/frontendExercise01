@@ -39,17 +39,25 @@ header img{
 
 .header__nav p{
   margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 /*Se cran estilos del main*/
 
 .articles__container{
   display: grid;
-  grid-template-columns: .5fr 3fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: .5fr 3fr .3fr;
+  grid-template-rows: 1fr .5fr 2fr;
+  grid-template-areas: "left first"
+                       "left second"
+                       "left tree";
 }
 
 /*Estilos de la barra lateral*/
+
+.article__left{
+    grid-area: left;
+}
 
 .article__left-title{
   text-align: center;
@@ -58,14 +66,19 @@ header img{
   font-size: 20px;
 }
 
-.article__left-title h2, h2, h3{
+.article__left-title h2{
   margin: 5px 0px 10px 0px;
   line-height: 25px;
 }
 
-.article__left-title p{
+.article__left-title h3{
     margin: 5px 0px 10px 0px;
     text-align: center;
+}
+
+.article__left-title p{
+  margin: 10px 0px;
+  font-size: 18px;
 }
 
 .span{
@@ -78,4 +91,24 @@ header img{
 .article__left-content p:nth-of-type(1) {
   margin: 10px 0px;
   text-align: center;
+}
+
+/*Estilos del primer articulo*/
+
+.article__first{
+  grid-area: first;
+  margin: 10px;
+  border-bottom: 2px solid black;
+}
+
+.article__first-image{
+  width: 100%;
+}
+
+.article__first-title{
+  margin: 5px;
+}
+
+.article__first-content{
+  margin-bottom: 10px;
 }
