@@ -16,6 +16,7 @@ h4 {
 p{
   margin: 0px;
   padding: 0px;
+  text-align: justify;
 }
 
 .grid-container{
@@ -47,16 +48,20 @@ header img{
 .articles__container{
   display: grid;
   grid-template-columns: .5fr 3fr .3fr;
-  grid-template-rows: 1fr .5fr 2fr;
+  grid-template-rows: 1fr auto 2fr;
   grid-template-areas: "left first"
                        "left second"
                        "left tree";
+  grid-column-gap: 5px;
 }
 
 /*Estilos de la barra lateral*/
 
 .article__left{
     grid-area: left;
+    border-right: 2px solid black;
+    padding-right: 5px;
+    margin: 5px 0px;
 }
 
 .article__left-title{
@@ -97,18 +102,48 @@ header img{
 
 .article__first{
   grid-area: first;
-  margin: 10px;
   border-bottom: 2px solid black;
 }
 
 .article__first-image{
   width: 100%;
+  margin-top: 5px;
 }
 
 .article__first-title{
-  margin: 5px;
+  margin-top: 10px;
 }
 
 .article__first-content{
   margin-bottom: 10px;
+}
+
+/*Estilos del segundo articulo*/
+
+.article__second{
+  grid-area: second;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 1fr;
+  grid-template-areas: "title title title title"
+                       "colum1 colum2 colum3 colum4";
+  border-bottom: 2px solid black;
+  grid-column-gap: 10px;
+}
+
+.article__second-title{
+  grid-area: title;
+  margin-top: 10px;
+}
+
+.colum{
+  margin-bottom: 10px;
+}
+
+.colum1 p:nth-of-type(1){
+  width: 50%;
+  border-top: 2px solid black;
+  margin: 5px  auto 10px auto;
+  padding-top: 5px;
+  text-align: center;
 }
