@@ -1,6 +1,6 @@
 body{
   margin: 0px;
-  padding: 0px;
+  padding: 2% 0px;
   font-family: 'Pathway Gothic One', sans-serif;
   color: black;
 }
@@ -48,10 +48,10 @@ header img{
 .articles__container{
   display: grid;
   grid-template-columns: .5fr 3fr .3fr;
-  grid-template-rows: 1fr auto 2fr;
-  grid-template-areas: "left first"
-                       "left second"
-                       "left tree";
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "left first right"
+                       "left second right"
+                       "left third right";
   grid-column-gap: 5px;
 }
 
@@ -146,4 +146,56 @@ header img{
   margin: 5px  auto 10px auto;
   padding-top: 5px;
   text-align: center;
+}
+
+/*Tercer articulo*/
+
+.article__third{
+  grid-area: third;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 40px 308px 300px;
+  grid-template-areas: "title title"
+                       "first image"
+                       "second image";
+  grid-column-gap: 10px;
+}
+
+.article__third-image{
+  grid-area: image;
+  width: 100%;
+  height: 100%;
+}
+
+.article__third-title{
+  grid-area: title;
+}
+
+.article__third-content2{
+  grid-area: second;
+  height: 75px;
+}
+
+.third__content2-title{
+  display: flex;
+}
+
+.third__content2-title div h2{
+  margin: 0 auto;
+  margin: 15px;
+  border-bottom: 2px solid black;
+}
+
+.third__content2-title p{
+  width: 90 %;
+}
+
+/*Contenedor lado izquierdo*/
+
+.article__rigth{
+  margin-top: 5px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  grid-area: right;
+  height: 100%;
 }
